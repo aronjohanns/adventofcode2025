@@ -1,0 +1,8 @@
+.metals/
+.bloop/
+.bsp/
+target/
+project/**
+!project/plugins.sbt
+!project/Dependencies.scala
+!project/build.properties
