@@ -3,21 +3,10 @@ package adventofcode
 import munit.FunSuite
 import scala.io.Source
 
-class Day01Spec extends FunSuite {
-  import Day01.*
-  val smallInput = """
-L68
-L30
-R48
-L5
-R60
-L55
-L1
-L99
-R14
-L82
-  """
+class Day01Tests extends FunSuite {
+  import day01.*
 
+  val smallInput = Source.fromResource("day01_example.txt").mkString
   val fullInput = Source.fromResource("day01.txt").mkString
 
   test("First part with example input") {

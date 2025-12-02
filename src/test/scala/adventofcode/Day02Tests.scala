@@ -4,7 +4,7 @@ import munit.FunSuite
 import io.Source
 
 class Day02Suite extends FunSuite {
-  import Day02.*
+  import day02.*
   val exampleInput = Source.fromResource("day02_example.txt").mkString
   val fullInput = Source.fromResource("day02.txt").mkString
 
@@ -21,6 +21,6 @@ class Day02Suite extends FunSuite {
   }
 
   test("Second part with full data") {
-    println(secondPart(fullInput))
+    assertEquals(BigInt("43872163557"), secondPart(fullInput))
   }
 }
