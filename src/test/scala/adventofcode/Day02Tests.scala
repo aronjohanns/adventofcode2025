@@ -3,7 +3,7 @@ package adventofcode
 import munit.FunSuite
 import io.Source
 
-class Day02Suite extends FunSuite {
+class Day02Tests extends FunSuite {
   import day02.*
   val exampleInput = Source.fromResource("day02_example.txt").mkString
   val fullInput = Source.fromResource("day02.txt").mkString
