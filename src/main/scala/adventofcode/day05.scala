@@ -26,10 +26,10 @@ def mergeRanges(ranges: List[Inclusive]): List[Inclusive] =
 
 def firstPart(source: String): Int =
   val (inv, ids) = input(source)
-  val merged = mergeRanges((inv))
+  val merged = mergeRanges(inv)
   ids.filter(id => merged.exists(_.contains(id))).length
 
 def secondPart(source: String): BigInt =
   val (inv, ids) = input(source)
-  val merged = mergeRanges((inv))
+  val merged = mergeRanges(inv)
   merged.map(r => r.end - (r.start - 1)).sum
