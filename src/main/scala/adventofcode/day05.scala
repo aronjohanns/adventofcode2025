@@ -18,7 +18,6 @@ def mergeRanges(ranges: List[Inclusive]): List[Inclusive] =
   ranges
     .sortWith((a, b) => a.start <= b.start)
     .foldLeft(List.empty[Inclusive]):
-      case (Nil, cur)                                 => cur :: Nil
       case (r1 :: rest, r2) if r2.start <= r1.end + 1 =>
         Inclusive(r1.start, r1.end.max(r2.end)) :: rest
       case (acc, cur) => cur :: acc
